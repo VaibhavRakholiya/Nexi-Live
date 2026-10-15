@@ -19,11 +19,11 @@
       </div>
     </div>
     <div id="unity-warning"> </div>
-    <div id="unity-footer">
+    <!-- <div id="unity-footer">
       <div id="unity-logo-title-footer"></div>
       <div id="unity-fullscreen-button"></div>
       <div id="unity-build-title">Nexi Games</div>
-    </div>
+    </div> -->
   </div>
   <script>
     var canvas = document.querySelector("#unity-canvas");
@@ -54,12 +54,12 @@
     }
 
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/Build.loader.js";
+    var loaderUrl = buildUrl + "/Nexi-Live.loader.js";
     var config = {
       arguments: [],
-      dataUrl: buildUrl + "/Build.data.unityweb",
-      frameworkUrl: buildUrl + "/Build.framework.js.unityweb",
-      codeUrl: buildUrl + "/Build.wasm.unityweb",
+      dataUrl: buildUrl + "/Nexi-Live.data.unityweb",
+      frameworkUrl: buildUrl + "/Nexi-Live.framework.js.unityweb",
+      codeUrl: buildUrl + "/Nexi-Live.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Nexi Games",
@@ -119,9 +119,9 @@
         document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
       }).then((unityInstance) => {
         document.querySelector("#unity-loading-bar").style.display = "none";
-        document.querySelector("#unity-fullscreen-button").onclick = () => {
-          unityInstance.SetFullscreen(1);
-        };
+        // document.querySelector("#unity-fullscreen-button").onclick = () => {
+        //   unityInstance.SetFullscreen(1);
+        // };
       }).catch((message) => {
         alert(message);
       });
